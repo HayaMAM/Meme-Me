@@ -131,6 +131,12 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         return keyboardSize.cgRectValue.height
     }
     
+    func hideTopAndBottomBars(_ hide: Bool) {
+        
+        toolBarBottom.isHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     func generateMemedImage() -> UIImage {
         
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -141,13 +147,6 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         navigationController?.setNavigationBarHidden(false, animated: true)
         
             return memedImage
-    }
-    
-    
-    func hideTopAndBottomBars(_ hide: Bool) {
-        
-        toolBarBottom.isHidden = true
-        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     struct Meme {
