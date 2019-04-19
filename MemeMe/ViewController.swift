@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate,
+class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var imagePickerView: UIImageView!
@@ -22,7 +22,6 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         super.viewWillAppear(animated)
         
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
-//        shareButton.isEnabled = false
         subscribeToKeyboardNotifications()
     }
     
@@ -53,6 +52,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     }
 
 
+ 
     @IBAction func pickAnImageFromAlbum(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -74,29 +74,32 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func pickAnImageFromCamera(_ sender: Any) {
+ @IBAction func pickAnImageFromCamera(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
     }
     
+
+    
+    
     @IBAction func cancel(_ sender: Any) {
         ttop.text = "TOP"
         tbottom.text = "BOTTOM"
     }
     
-    
-    
 //    TEXT FIELD DELEGATE
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        
         if textField.text == "TOP" || textField.text == "BOTTOM" {
             textField.text = ""
         }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         textField.resignFirstResponder()
         return true
     }
@@ -109,8 +112,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     
     func unsubscribeFromKeyboardNotifications() {
         
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self)
     }
     
     @objc func keyboardWillShow(_ notification:Notification) {
@@ -130,19 +132,22 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     }
     
     func generateMemedImage() -> UIImage {
-
-        toolBarBottom.isHidden = true
-        navigationController?.setNavigationBarHidden(true, animated: true)
-
+        
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-
         toolBarBottom.isHidden = false
         navigationController?.setNavigationBarHidden(false, animated: true)
-
+        
             return memedImage
+    }
+    
+    
+    func hideTopAndBottomBars(_ hide: Bool) {
+        
+        toolBarBottom.isHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     struct Meme {
@@ -153,11 +158,11 @@ UINavigationControllerDelegate, UITextFieldDelegate {
     }
     
     func save() {
-        // Create the meme
         _ = Meme(topText: ttop.text!, bottomText: tbottom.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
     }
     
     @IBAction func share(_ sender: UIBarButtonItem) {
+        
         let memeImage: UIImage = generateMemedImage()
         let controller = UIActivityViewController(activityItems: [memeImage], applicationActivities: nil)
         controller.completionWithItemsHandler = {( type, complete, items, error ) in
@@ -167,8 +172,4 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         }
         self.present(controller, animated: true, completion: nil)
     }
-    
-    
 }
-    
-
