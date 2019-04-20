@@ -84,7 +84,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cameraButton" destination="gdo-GP-asr" id="sw6-Hj-6hP"/>
-                        <outlet property="imagePickerView" destination="nl1-x1-ByZ" id="59d-dI-KCE"/>
+                        <outlet property="imagePickerView" destination="nl1-x1-ByZ" id="TK2-bb-z9y"/>
                         <outlet property="shareButton" destination="joz-Fi-0FE" id="JjG-nU-meC"/>
                         <outlet property="tbottom" destination="UaJ-ar-HzF" id="fy6-bQ-fid"/>
                         <outlet property="toolBarBottom" destination="SbJ-8Z-aXU" id="3Dt-yW-U6F"/>
