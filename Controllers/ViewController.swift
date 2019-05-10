@@ -153,15 +153,15 @@ UINavigationControllerDelegate, UITextFieldDelegate {
             return memedImage
     }
     
-    struct Meme {
-        var topText: String
-        var bottomText: String
-        var originalImage: UIImage
-        var memedImage: UIImage
-    }
+    
     
     func save() {
-        _ = Meme(topText: ttop.text!, bottomText: tbottom.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
+        let meme = Meme(topText: ttop.text!, bottomText: tbottom.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memes.append(meme)
+        
+        
     }
     
     @IBAction func share(_ sender: UIBarButtonItem) {
@@ -171,6 +171,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         controller.completionWithItemsHandler = {( type, complete, items, error ) in
             if complete {
                 self.save()
+                    _ = self.navigationController?.popToRootViewController(animated: true)
             }
         }
         self.present(controller, animated: true, completion: nil)
