@@ -14,8 +14,9 @@
 		2E6AF3322261262500FEBDA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E6AF3312261262500FEBDA5 /* Assets.xcassets */; };
 		2E6AF3352261262500FEBDA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E6AF3332261262500FEBDA5 /* LaunchScreen.storyboard */; };
 		2E6AF3402261262500FEBDA5 /* MemeMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AF33F2261262500FEBDA5 /* MemeMeTests.swift */; };
-		2E9924D42284EF880010BF12 /* MemesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9924D32284EF880010BF12 /* MemesCollectionViewController.swift */; };
-		2E9924D62284EFC90010BF12 /* MemesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9924D52284EFC90010BF12 /* MemesCollectionViewCell.swift */; };
+		2E9924D8228524C50010BF12 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9924D7228524C50010BF12 /* DetailsViewController.swift */; };
+		2E9924DA22852B5F0010BF12 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9924D922852B5F0010BF12 /* CollectionViewController.swift */; };
+		2E9924DC22852B790010BF12 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9924DB22852B790010BF12 /* CollectionViewCell.swift */; };
 		2E9998292273A2460097B623 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9998282273A2460097B623 /* Meme.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +42,9 @@
 		2E6AF33B2261262500FEBDA5 /* MemeMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemeMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6AF33F2261262500FEBDA5 /* MemeMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMeTests.swift; sourceTree = "<group>"; };
 		2E6AF3412261262500FEBDA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E9924D32284EF880010BF12 /* MemesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesCollectionViewController.swift; sourceTree = "<group>"; };
-		2E9924D52284EFC90010BF12 /* MemesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesCollectionViewCell.swift; sourceTree = "<group>"; };
+		2E9924D7228524C50010BF12 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		2E9924D922852B5F0010BF12 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		2E9924DB22852B790010BF12 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		2E9998282273A2460097B623 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,8 +128,9 @@
 			children = (
 				2E6AF32C2261262400FEBDA5 /* ViewController.swift */,
 				2E4432CB227FB65600FDCD7F /* MemesTableViewController.swift */,
-				2E9924D32284EF880010BF12 /* MemesCollectionViewController.swift */,
-				2E9924D52284EFC90010BF12 /* MemesCollectionViewCell.swift */,
+				2E9924D7228524C50010BF12 /* DetailsViewController.swift */,
+				2E9924D922852B5F0010BF12 /* CollectionViewController.swift */,
+				2E9924DB22852B790010BF12 /* CollectionViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,10 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E9924D62284EFC90010BF12 /* MemesCollectionViewCell.swift in Sources */,
+				2E9924DA22852B5F0010BF12 /* CollectionViewController.swift in Sources */,
 				2E9998292273A2460097B623 /* Meme.swift in Sources */,
-				2E9924D42284EF880010BF12 /* MemesCollectionViewController.swift in Sources */,
 				2E6AF32D2261262400FEBDA5 /* ViewController.swift in Sources */,
+				2E9924DC22852B790010BF12 /* CollectionViewCell.swift in Sources */,
+				2E9924D8228524C50010BF12 /* DetailsViewController.swift in Sources */,
 				2E6AF32B2261262400FEBDA5 /* AppDelegate.swift in Sources */,
 				2E4432CC227FB65600FDCD7F /* MemesTableViewController.swift in Sources */,
 			);

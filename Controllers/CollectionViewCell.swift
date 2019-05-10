@@ -1,5 +1,5 @@
 //
-//  MemesCollectionViewCell.swift
+//  CollectionViewCell.swift
 //  MemeMe
 //
 //  Created by Haya Mousa on 10/05/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemesCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var poster: UIImageView!
+class CollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageView: UIImageView!
 }

@@ -48,8 +48,14 @@ class MemesTableViewController: UITableViewController {
         return 100
     }
     
+    
+    
 //    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//        navigationController?.pushViewController(MemeDetailViewController(meme: memes[indexPath.row]), animated: true)
+//        let meme = memes[indexPath.row]
+//
+//        let detail = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController(withIdentifier: "DetailsID") as! DetailsViewController
+//
+//        navigationController?.pushViewController(DetailsViewController(detail), animated: true)
 //    }
     
     
