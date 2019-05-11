@@ -23,6 +23,7 @@ class MemesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableCell")
     }
     
@@ -48,15 +49,22 @@ class MemesTableViewController: UITableViewController {
         return 100
     }
     
-    
-    
-//    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let meme = memes[indexPath.row]
-//
-//        let detail = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController(withIdentifier: "DetailsID") as! DetailsViewController
-//
-//        navigationController?.pushViewController(DetailsViewController(detail), animated: true)
+
+        let detailController = self.storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        detailController.meme = self.memes[(indexPath as NSIndexPath).row]
+        self.navigationController!.pushViewController(detailController, animated: true)
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let meme = memes[indexPath.row]
+//        let detail = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailsID") as! DetailsViewController
+//        detail.memes = meme
 //    }
+    
+    
+   
     
     
 }
