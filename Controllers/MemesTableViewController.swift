@@ -56,14 +56,4 @@ class MemesTableViewController: UITableViewController {
         navigationController?.pushViewController(details, animated: true)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let meme = memes[indexPath.row]
-//        let detail = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailsID") as! DetailsViewController
-//        detail.memes = meme
-//    }
-    
-    
-   
-    
-    
 }

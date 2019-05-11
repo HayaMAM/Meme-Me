@@ -59,23 +59,5 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         detailController.meme = self.memes[(indexPath as NSIndexPath).row]
         self.navigationController?.pushViewController(detailController, animated: true)
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return 1
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let numberOfItemsInRow : CGFloat = 8
-//        let marginPoints: CGFloat = 2
-//        let totalMargin: CGFloat = (numberOfItemsInRow - 1) * marginPoints
-//
-//        let width = collectionView.frame.width - totalMargin
-//        let itemWidth = width / numberOfItemsInRow
-//        return CGSize(width: itemWidth, height: itemWidth)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        return UIEdgeInsets(top: 100, left: 100, bottom: 100, right: 100)
-//    }
 
 }
