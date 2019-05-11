@@ -87,6 +87,7 @@ UINavigationControllerDelegate, UITextFieldDelegate {
         
         ttop.text = "TOP"
         tbottom.text = "BOTTOM"
+        _ = self.navigationController?.popToRootViewController(animated: true)
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {

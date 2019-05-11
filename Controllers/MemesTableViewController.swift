@@ -50,11 +50,10 @@ class MemesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let meme = memes[indexPath.row]
 
-        let detailController = self.storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
-        detailController.meme = self.memes[(indexPath as NSIndexPath).row]
-        self.navigationController!.pushViewController(detailController, animated: true)
+        let details = storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        details.meme = memes[(indexPath as NSIndexPath).row]
+        navigationController?.pushViewController(details, animated: true)
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

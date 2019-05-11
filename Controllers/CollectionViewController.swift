@@ -53,6 +53,13 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let detailController = self.storyboard?.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+        detailController.meme = self.memes[(indexPath as NSIndexPath).row]
+        self.navigationController?.pushViewController(detailController, animated: true)
+    }
+    
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
 //        return 1
 //    }
