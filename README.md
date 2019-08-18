@@ -4,9 +4,9 @@ Meme Me is an application for people who want to add a text to their photos. Use
 
 
 <p align="center">
-  <img src="https://i.postimg.cc/28xKZtJv/Simulator-Screen-Shot-i-Phone-X-2019-08-18-at-03-23-46.png">
-  <img src="https://i.postimg.cc/YCnDXWtC/Simulator-Screen-Shot-i-Phone-X-2019-08-18-at-03-24-56.png">
-  <img src="https://i.postimg.cc/6p51L0JP/Simulator-Screen-Shot-i-Phone-X-2019-08-18-at-03-25-07.png">
+  <img src="https://i.postimg.cc/B6bGt0Nm/Simulator-Screen-Shot-i-Phone-X-2019-08-18-at-03-23-46.png">
+  <img src="https://i.postimg.cc/90q5tY6T/Simulator-Screen-Shot-i-Phone-X-2019-08-18-at-03-24-56.png">
+  <img src="https://i.postimg.cc/G9w0MsRf/Simulator-Screen-Shot-i-Phone-X-2019-08-18-at-03-25-07.png">
 </p>
 
 ## Used Technologies in Virtual Tourist Project
