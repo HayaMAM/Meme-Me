@@ -2,9 +2,12 @@
 
 Meme Me is an application for people who want to add a text to their photos. Users can choose a text from their photo album and add a text on it.Then this edited photo can be shared and saved on the same application.
 
-[![Simulator-Screen-Shot-i-Phone-X-2019-08-18-at-03-23-46.png](https://i.postimg.cc/28xKZtJv/Simulator-Screen-Shot-i-Phone-X-2019-08-18-at-03-23-46.png)](https://postimg.cc/qzzwf1pM)
-[![Simulator-Screen-Shot-i-Phone-X-2019-08-18-at-03-24-46.png](https://i.postimg.cc/YCnDXWtC/Simulator-Screen-Shot-i-Phone-X-2019-08-18-at-03-24-56.png)](https://postimg.cc/sMWJx1Bk)
-[![Simulator-Screen-Shot-i-Phone-X-2019-08-18-at-03-25-46.png](https://i.postimg.cc/6p51L0JP/Simulator-Screen-Shot-i-Phone-X-2019-08-18-at-03-25-07.png)](https://postimg.cc/6yg0BCQV)
+
+<p align="center">
+  <img src="https://i.postimg.cc/28xKZtJv/Simulator-Screen-Shot-i-Phone-X-2019-08-18-at-03-23-46.png">
+  <img src="https://i.postimg.cc/YCnDXWtC/Simulator-Screen-Shot-i-Phone-X-2019-08-18-at-03-24-56.png">
+  <img src="https://i.postimg.cc/6p51L0JP/Simulator-Screen-Shot-i-Phone-X-2019-08-18-at-03-25-07.png">
+</p>
 
 ## Used Technologies in Virtual Tourist Project
 * Swift 5
